@@ -1,0 +1,196 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark Blue: 
+- Grayish Blue: 
+
+## Typography
+
+### Body Copy
+
+- Font size: 32px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 300, 500, 700 */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root{
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    height: 100vh;
+}
+
+#slideshow p{
+    color: var(--grayish-blue);
+    background: url('images/pattern-quotes.svg') no-repeat top center;
+    background-size: 50px;
+}
+#slideshow h5{
+    color: var(--dark-blue);
+}
+
+.img-container{
+    background: url('images/pattern-bg.svg') no-repeat center center;
+    background-size: 300px;
+    background-position-y: 25px;
+}
+
+#slide-1 p span,
+#slide-2 p span{
+    margin: 20px 0;
+    color: var(--dark-blue);
+    font-weight: 300;
+}
+
+#slide-1,
+#slide-2{
+    background: url('images/pattern-curve.svg') no-repeat bottom left;
+    background-size: 300px;
+}
+
+.slide-1{
+    z-index: 1;
+}
+.slide-2{
+    z-index: 2;
+}
+
+.slider{
+    z-index: 3;
+}
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media screen and (min-width: 375px){
+    body{
+        height: 100vh;
+    }
+    #slide-1,
+    #slide-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+    #slide-1 p{
+        font-size: 15px;
+        flex: 1;
+        margin: -90px 0 0 0;
+        text-align: center;
+        width: 70%;
+    }
+    #slide-2 p{
+        width: 70%;
+        font-size: 15px;
+        text-align: center;
+        flex: 1;
+        margin: -90px 0 0 0;
+    }
+    
+    .img-container img{
+        margin: -100px 0 0 0;
+        transform: scale(0.4);
+        border-radius: 10px;
+    }
+
+
+    #slider1{
+        position: absolute;
+        top: 260px;
+        right: 150px;
+        background-color: white;
+        border-radius: 20px;
+        display: inline-flex;
+    }
+    .slider img{
+        padding: 10px 10px;
+    }
+
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 150px
+    }
+}
+
+@media screen and (min-width: 1440px){
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .img-container{
+        height: 60vh;
+        background: url('images/pattern-bg.svg') no-repeat center center;
+        background-size: 350px;
+        background-position-y: -25px;
+    }
+    .img-container img{
+        transform: scale(0.48);
+        position: relative;
+        top: -20px;
+    }
+    #slide-1,
+    #slide-2{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        width: 70vw;
+    }
+
+    #slider1{
+        position: absolute;
+        top: 420px;
+        left: 930px;
+        background-color: white;
+        border-radius: 20px;
+        width: 5vw;
+        display: inline-flex;
+        flex: 2;
+    }
+    .slider img{
+        padding: 10px 10px;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 90px
+    }
+}
