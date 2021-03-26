@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: 
+- Live Site URL: https://rhulog.github.io/coding-bootcamp-testimonial/
 
 ## My process
 I've been learning jQuery recently so incorporated that into the making of this one. The slider toggle took a bit to figure out in Javascript but the jQuery cut down the lines of code by more than a half.
